@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/thanhlongzzz/BroadcastReceiver-For-Naught-and-Oreo-devices.svg)](https://jitpack.io/#thanhlongzzz/BroadcastReceiver-For-Naught-and-Oreo-devices)
+
 # BroadcastReceiver-For-Naught-and-Oreo-devices
 Broadcast Receiver for naught and oreo+ devices . getting all the actions performed by device at one place.
 working on all devices get all Actions at place for :-
