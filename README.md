@@ -9,7 +9,8 @@ working on all devices get all Actions at place for :-
 
 You can add other action according to your need .
 
-``Class MyReceiver
+Class MyReceiver
+```
 @BroadcastReceiverActions({
         "android.intent.action.SCREEN_ON",
         "android.intent.action.SCREEN_OFF",
@@ -20,22 +21,19 @@ You can add other action according to your need .
         "android.net.conn.CONNECTIVITY_CHANGE"
 })
 public class MyReceiver extends BroadcastReceiver {
-
     public MyReceiver() {
         super();
     }
-
     @Override
     public void onReceive(Context context, Intent intent) {
         Session.getGlobalReceiverCallBack(context, intent);
-
         //Log.e("dfd", "" + intent.getAction());
     }
 }
-
+```
 Class AppController
-public class AppController extends Application {
 
+```public class AppController extends Application {
     private BroadcastReceiver receiver;
     MyReceiver mR;
 
@@ -45,12 +43,11 @@ public class AppController extends Application {
         mR = new MyReceiver();
         receiver = DynamicReceiver.with(mR)
                 .register(this);
-
     }
 }
-
+```
 Class MainActivity
-public class MainActivity extends AppCompatActivity implements GlobalReceiverCallBack {
+```public class MainActivity extends AppCompatActivity implements GlobalReceiverCallBack {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,4 +62,5 @@ public class MainActivity extends AppCompatActivity implements GlobalReceiverCal
 
         Toast.makeText(context, "" + intent.getAction(), Toast.LENGTH_LONG).show();
     }
-}``
+}
+```
